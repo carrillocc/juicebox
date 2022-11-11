@@ -64,10 +64,48 @@ async function updateUser(id, fields = {}) {
   }
 }
 
+async function createPost({ authorId, title, content }) {
+  try {
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function updatePost(id, { title, content, active }) {
+  try {
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function getAllPosts() {
+  try {
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function getPostsByUser(userId) {
+  try {
+    const { rows } = await client.query(`
+      SELECT * FROM posts
+      WHERE "authorId"=${userId};
+    `);
+
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
 // and export them
 module.exports = {
   client,
   getAllUsers,
   createUser,
   updateUser,
+  createPost,
+  updatePost,
+  getAllPosts,
+  getPostsByUser,
 };
