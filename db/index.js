@@ -335,20 +335,19 @@ async function addTagsToPost(postId, tagList) {
   }
 }
 
-// async function getAllTags() {
-//   try {
-//     const { rows } = await client.query(`
-//       SELECT *
-//       FROM tags;
-//     `);
+async function getAllTags() {
+  try {
+    const { rows } = await client.query(`
+      SELECT *
+      FROM tags;
+    `);
 
-//     return { rows };
-//   } catch (error) {
-//     throw error;
-//   }
-// }
+    return { rows };
+  } catch (error) {
+    throw error;
+  }
+}
 
-// and export them
 module.exports = {
   client,
   getAllUsers,
@@ -363,5 +362,5 @@ module.exports = {
   createTags,
   createPostTag,
   addTagsToPost,
-  // getAllTags,
+  getAllTags,
 };
