@@ -2,6 +2,8 @@
 const express = require("express");
 const apiRouter = express.Router();
 
+require("dotenv").config();
+
 const usersRouter = require("./users");
 apiRouter.use("/users", usersRouter);
 
