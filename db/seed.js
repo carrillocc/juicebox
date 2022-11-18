@@ -7,6 +7,7 @@ const {
   updatePost,
   getAllPosts,
   getPostsByUser,
+  getUserByUsername,
   getPostsByTagName,
   getUserById,
   createTags,
