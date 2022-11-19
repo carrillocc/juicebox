@@ -10,6 +10,7 @@ const {
   getUserByUsername,
   getPostsByTagName,
   getUserById,
+  getPostById,
   createTags,
   createPostTag,
   addTagsToPost,
