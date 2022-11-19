@@ -46,14 +46,6 @@ apiRouter.use((req, res, next) => {
   next();
 });
 
-apiRouter.use((req, res, next) => {
-  if (req.user) {
-    console.log("User is set:", req.user);
-  }
-
-  next();
-});
-
 const usersRouter = require("./users");
 apiRouter.use("/users", usersRouter);
 
@@ -71,3 +63,5 @@ apiRouter.use((error, req, res, next) => {
 });
 
 module.exports = apiRouter;
+
+//token from albert: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhbGJlcnQiLCJwYXNzd29yZCI6ImJlcnRpZTk5IiwibmFtZSI6Ik5ld25hbWUgU29nb29kIiwibG9jYXRpb24iOiJMZXN0ZXJ2aWxsZSwgS1kiLCJhY3RpdmUiOnRydWUsImlhdCI6MTY2ODg2OTEzN30.xMSSmDqjLVOimm_cmuZzEGttDboyKlOmZjh0IaQcZSo
